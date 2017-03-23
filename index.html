@@ -13,7 +13,13 @@
 
 
     <div class="container">
+      <img id="flagactivate" src="img/flag.svg"/>
       <h1>Register to vote</h1>
+      <h4>Here are the requirements to vote in the state of Oregon:</h4>
+      <ul id="thelist">
+        <li>Are you a US citizen?</li>
+        <li>Are you old enough to vote.</li>
+      </ul>
       <div>
         <form id="formOne">
 
@@ -41,18 +47,21 @@
           <h4>What is your name?</h4>
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input id="name" class="form-control" type="text">
+            <input id="name" class="form-control" type="text" placeholder="Your First Name">
           </div>
 
           <h4>What is your age?</h4>
           <div class="form-group">
             <label for="age">Your Age</label>
-            <input id="age" class="form-control" type="text">
+            <input id="age" class="form-control" type="text" placeholder="Your Age">
           </div>
 
           <button type="submit" class="btn">Schedule it</button>
         </form>
       </div>
+
+
+
       <div id="agecitizenship">
         <br>
         <p>Congratulations <span class="nameplace"></span>, you are a US citizen!  You are also <span id="ageplace"></span> years old, which means that you are curently eligible to vote in the US.</p>

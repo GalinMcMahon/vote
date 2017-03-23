@@ -1,4 +1,19 @@
 $(document).ready(function() {
+  $("#flagactivate").click(function() {
+    alert("Submission successful!");
+    alert("You are eligible!");
+    $('#agecitizenship').show();
+    event.preventDefault();
+    $('body').css('background-color', 'blue');
+  });
+
+  $("ul#thelist").children("li").first().click(function() {
+    alert("First list item clicked!");
+  });
+
+  $("ul#thelist").children("li:nth-child(2)").click(function() {
+    alert("Second list item clicked!");
+  });
 
 
   $("#formOne").submit(function(event) {
