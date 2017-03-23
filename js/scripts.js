@@ -24,32 +24,37 @@ $(document).ready(function() {
     var ageInput = $("input#age").val();
       //alert(ageInput);
 
-    if (citizen == 'yes') {
-      if (ageInput >= 18) {
-        alert("Submission successful!");
-        alert("You are eligible!");
-        $('#agecitizenship').show();
-        $(".nameplace").text(nameInput);
-        $("#ageplace").text(ageInput);
-        event.preventDefault();
+    if (ageInput) {
+      if (citizen == 'yes') {
+        if (ageInput >= 18) {
+          alert("Submission successful!");
+          alert("You are eligible!");
+          $('#agecitizenship').show();
+          $(".nameplace").text(nameInput);
+          $("#ageplace").text(ageInput);
+          event.preventDefault();
+        }
+
+        else {
+          alert("Submission successful!");
+          $(".nameplace").text(nameInput);
+          $('#agefail').show();
+          event.preventDefault();
+        }
+
       }
 
       else {
         alert("Submission successful!");
         $(".nameplace").text(nameInput);
-        $('#agefail').show();
+        $('#citfail').show();
         event.preventDefault();
       }
-
     }
 
     else {
-      alert("Submission successful!");
-      $(".nameplace").text(nameInput);
-      $('#citfail').show();
-      event.preventDefault();
+      alert('Please enter your age.');
     }
-
 
     // $(".age").text(ageInput);
     // $("#story").show();
